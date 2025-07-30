@@ -1,0 +1,42 @@
+.features {
+    display: flex;
+    flex-wrap: wrap;  
+    margin: 9rem 3rem;
+    justify-content: center;  
+}
+
+.feature {
+    flex: 1 1 calc(33% - 1rem) ;
+    max-width: 300px; 
+    height: 250px;
+    border: 1px solid rgb(84, 84, 218);
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin: 3.5rem;   
+     color: #fff;
+    background-color: rgba(104, 99, 99, 0.5);
+}
+.feature h3 {
+    margin-top: 12px;
+    font-size: x-large;
+}
+.feature   p  {
+    font-size: larger;
+    margin-top: 5px;
+}
+
+.star-icon  ,.bolt-icon , .members-icon{
+    background: rgb(56, 58, 173);
+    border-radius: 23px;
+    fill: #fff;
+    width: 25px;
+    padding: 12px;
+    margin-top: 1.5rem;
+}
+
+@media  screen and (max-width:900px ) {
+    .feature {
+        flex: 1 1 calc(100% - 1rem);
+    }
+  
+}
