@@ -1,34 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team Portfolio</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" />
 </head>
+
 <body>
 
 <!-- Navbar -->
 <nav class="navbar">
-    
+  <div class="container">
+    <div class="logo">Team Portfolio</div>
+    <div class="hamburger">☰</div>
+    <span class="close-btn">×</span>
+    <ul class="nav-links">
+      <li><a href="#">الرئيسية</a></li>
+      <li><a href="#">لماذا نحن</a></li>
+      <li><a href="#">الفريق</a></li>
+    </ul>
+  </div>
 </nav>
 
- <!-- Hero Section -->
+<!-- Hero Section -->
 <section class="hero">
-
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span><p>لماذا نحن</p></span>
+      </div>
+      <h1 class="hero-title">مجتمع مطوري المدينة</h1>
+      <p class="hero-description">
+        ,منصة تعرض نخبة المبرمجين وخدماتهم باحترافية اكتشف مشاريع ملهمة<br />
+        وتواصل مع مبدعين في مجالات البرمجة المختلفة
+      </p>
+    </div>
+  </div>
+  <img src="Star.png" alt="Star" />
 </section>
 
-  <!-- Why Us Section -->
+<!-- Why Us Section -->
 <section class="why-us">
+  <h2>لماذا نختار مطوري المدينة؟</h2>
+  <p>نحن نقدم خدمات تطوير متميزة بخبرات متنوعة وفريق عمل محترف</p>
+
   <div class="features">
     <!-- ميزات الموقع -->
+    <div class="feature">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 640"
+        class="star-icon"
+      >
+        <path
+          d="M341.5 45.1C337.4 37.1 329.1 32 320.1 32C311.1 32 302.8 37.1 298.7 45.1L225.1 189.3L65.2 214.7C56.3 216.1 48.9 222.4 46.1 231C43.3 239.6 45.6 249 51.9 255.4L166.3 369.9L141.1 529.8C139.7 538.7 143.4 547.7 150.7 553C158 558.3 167.6 559.1 175.7 555L320.1 481.6L464.4 555C472.4 559.1 482.1 558.3 489.4 553C496.7 547.7 500.4 538.8 499 529.8L473.7 369.9L588.1 255.4C594.5 249 596.7 239.6 593.9 231C591.1 222.4 583.8 216.1 574.8 214.7L415 189.3L341.5 45.1z"
+        />
+      </svg>
+      <h3>جودة عالية</h3>
+      <p>
+        نلتزم باعلى معايير الجودة في البرمجة والتصميم لضمان افضل النتائج
+      </p>
+    </div>
+    <div class="feature">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 640"
+        class="bolt-icon"
+      >
+        <path
+          d="M434.8 54.1C446.7 62.7 451.1 78.3 445.7 91.9L367.3 288L512 288C525.5 288 537.5 296.4 542.1 309.1C546.7 321.8 542.8 336 532.5 344.6L244.5 584.6C233.2 594 217.1 594.5 205.2 585.9C193.3 577.3 188.9 561.7 194.3 548.1L272.7 352L128 352C114.5 352 102.5 343.6 97.9 330.9C93.3 318.2 97.2 304 107.5 295.4L395.5 55.4C406.8 46 422.9 45.5 434.8 54.1z"
+        />
+      </svg>
+      <h3>تطوير سريع</h3>
+      <p>نستخدم احدث الادوات والتقينيات لتسريع عملية التطوير وتحسين الجودة</p>
+    </div>
+    <div class="feature">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 640"
+        class="members-icon"
+      >
+        <path
+          d="M320 64C355.3 64 384 92.7 384 128C384 163.3 355.3 192 320 192C284.7 192 256 163.3 256 128C256 92.7 284.7 64 320 64zM416 376C416 401 403.3 423 384 435.9L384 528C384 554.5 362.5 576 336 576L304 576C277.5 576 256 554.5 256 528L256 435.9C236.7 423 224 401 224 376L224 336C224 283 267 240 320 240C373 240 416 283 416 336L416 376zM160 96C190.9 96 216 121.1 216 152C216 182.9 190.9 208 160 208C129.1 208 104 182.9 104 152C104 121.1 129.1 96 160 96zM176 336L176 368C176 400.5 188.1 430.1 208 452.7L208 528C208 529.2 208 530.5 208.1 531.7C199.6 539.3 188.4 544 176 544L144 544C117.5 544 96 522.5 96 496L96 439.4C76.9 428.4 64 407.7 64 384L64 352C64 299 107 256 160 256C172.7 256 184.8 258.5 195.9 262.9C183.3 284.3 176 309.3 176 336zM432 528L432 452.7C451.9 430.2 464 400.5 464 368L464 336C464 309.3 456.7 284.4 444.1 262.9C455.2 258.4 467.3 256 480 256C533 256 576 299 576 352L576 384C576 407.7 563.1 428.4 544 439.4L544 496C544 522.5 522.5 544 496 544L464 544C451.7 544 440.4 539.4 431.9 531.7C431.9 530.5 432 529.2 432 528zM480 96C510.9 96 536 121.1 536 152C536 182.9 510.9 208 480 208C449.1 208 424 182.9 424 152C424 121.1 449.1 96 480 96z"
+        />
+      </svg>
+      <h3> فريق متخصص </h3>
+      <p> فريق من افضل المطورين المتخصصين في مختلف التقنيات الحديثة</p>
+    </div>
   </div>
 </section>
 
 <!-- Team Section -->
 <section class="team">
-
-  <h2 class="section-title">الفريق</h2>
+    <h2 class="section-title">الفريق</h2>
   <div class="slider">
     <button class="nav prev">‹</button>
 
@@ -38,16 +103,10 @@
     </div>
     <button class="nav next">›</button>
   </div>
-
-
 </section>
 
-<!-- Footer -->
-<footer class="footer">
 
-</footer>
-
-
-<script src="index.js"></script>   
+<script src="index.js"></script>
 </body>
 </html>
+
