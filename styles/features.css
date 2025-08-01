@@ -36,7 +36,24 @@
 
 @media  screen and (max-width:900px ) {
     .feature {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+
+
+@media  screen and (max-width:450px ) {
+    .feature  {
         flex: 1 1 calc(100% - 1rem);
+        padding: 13px;
+        min-width: 200px;
+    }
+    .feature h3 {
+        font-size: large;
+        font-weight: 600;
+    }
+    .feature p {
+        font-size:medium;
     }
   
 }
