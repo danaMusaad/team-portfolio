@@ -1,0 +1,126 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(94, 86, 135, 0.21); 
+  border: 1px solid rgba(66, 66, 66, 0.65);
+  color: #fff;
+  border-radius: 40px;
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 10px 20px;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00ccff;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  display: none;
+  right: 30px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    position: relative; 
+    padding-right: 50px;
+    height: 40px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(94, 86, 135, 0.21); 
+    border: 1px solid rgba(66, 66, 66, 0.65);
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%; 
+    padding: 20px 20px 20px 20px; 
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    text-align: right;
+    box-sizing: border-box; 
+    list-style: none;
+    margin: 20px 0 ; /**  position  links container without intersection */
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px; 
+  }
+
+  .close-btn {
+    display: none;
+    position: absolute;
+    top:-30px;
+    right: 15px; 
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    user-select: none;
+  }
+
+.container.active .close-btn {
+    display: block;
+}
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top:-5px;
+    right: 15px; 
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    user-select: none;
+  }
+}

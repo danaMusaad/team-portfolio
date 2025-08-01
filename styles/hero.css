@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+
+:root {
+    --bg-black: #0000;
+    --primary-bg: #0f0f23;
+    --secondary-bg: #1a1a2e;
+    --accent-purple: #6c5ce7;
+    --accent-pink: #ff00cc;
+    --accent-blue: #00b4d8;
+    --text-white: #ffffff;
+    --text-black: #0000;
+    --text-gray: #a0a0a0;
+    --text-light-gray: #d1d5db;
+    --gradient-start: #6c5ce7;
+    --gradient-end: #a29bfe;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/ /*cause shrinking icon*/
+    font-family: "Cairo", sans-serif;
+    font-weight: 400;
+    font-optical-sizing: auto;
+}
+
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    margin: -9rem 0 ; /** move hero to top pages ! */
+}
+
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.hero-badge {
+    position: absolute;
+    display: inline-block;
+    background: #EA4497;
+    color: #1B1B1B;
+    padding: 0rem 1.2rem;
+    border-radius: 65px;
+    font-size: 0.9rem;
+    margin-left: 5.2rem;
+    top: 0.7rem;
+    right: 7.7rem;
+    z-index: -1;
+    transform: rotateZ(-20deg);
+}
+
+
+.hero-badge > span > p {
+    font-weight: 600;
+}
+
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-white);
+}
+
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-style: normal;
+}
+
+
+img {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    margin-top: 26rem;
+}
