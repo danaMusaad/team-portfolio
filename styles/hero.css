@@ -23,7 +23,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/ /*cause shrinking icon*/
     font-family: "Cairo", sans-serif;
     font-weight: 400;
     font-optical-sizing: auto;
@@ -37,6 +37,7 @@
     position: relative;
     overflow: hidden;
     background-color: black;
+    margin: -9rem 0 ; /** move hero to top pages ! */
 }
 
 
