@@ -87,6 +87,9 @@
   .nav-links.active {
     display: flex;
     flex-direction: column;
+    backdrop-filter: blur(6px);          
+    -webkit-backdrop-filter: blur(6px);  
+    background-color: rgba(94, 86, 135, 0.21);
   }
 
   .nav-links a {
