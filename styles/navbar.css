@@ -84,13 +84,13 @@
     margin: 20px 0 ; /**  position  links container without intersection */
   }
 
-  .nav-links.active {
-    display: flex;
-    flex-direction: column;
-    backdrop-filter: blur(6px);          
-    -webkit-backdrop-filter: blur(6px);  
-    background-color: rgba(94, 86, 135, 0.21);
-  }
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(6px); 
+  -webkit-backdrop-filter: blur(6px); 
+  background-color: rgba(0, 0, 0, 0.694); 
+}
 
   .nav-links a {
     font-size: 20px;
