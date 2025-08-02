@@ -1,0 +1,226 @@
+:root {
+    --bg-black: #000000;  
+    --primary-bg: #000000;
+    --secondary-bg: #080808;
+    --accent-pink: #ff00cc;
+    --accent-purple: rgb(108, 92, 231);
+    
+    --accent-blue: #00b4d8;
+    --text-white: #ffffff;
+    
+   
+    --gradient-start: #6c5ce7;
+    --gradient-end: #a29bfe;
+    --card-bg: rgb(0, 0, 0);
+    --border-color: rgb(0, 0, 0);
+    --shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+/*body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(at 30% 40%, rgba(18, 46, 100, 0.5), transparent 50%),
+    radial-gradient(at 70% 60%, rgba(33, 33, 100, 0.753), transparent 50%),
+    linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+
+  font-family: 'Cairo', sans-serif;
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+*/
+
+
+  /* قسم الفريق */
+  .team {
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    margin: -9rem 0;
+    background:
+    radial-gradient(at 30% 40%, rgba(18, 46, 100, 0.5), transparent 50%),
+    radial-gradient(at 70% 60%, rgba(33, 33, 100, 0.753), transparent 50%),
+    linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+
+  }
+  
+  .section-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  
+  /* السلايدر */
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+
+  .cards-container {
+    display: flex;
+    gap: 30px;
+    width: 80%; /* عشان ريسبونسف */
+    justify-content: center;
+  }
+  
+  /* البطاقة */
+.team-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  
+  
+    border-radius: 20px 60px 0 20px;
+  
+    padding: 25px;
+    width: 26vw;
+    max-width: 388px;
+    height: 40vw;
+    max-height: 579px;
+  
+    text-align: center;
+    transform: scale(0.85);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  
+
+    /* الإطار  */
+    border: 3px solid transparent;
+    background-clip: padding-box;} 
+
+
+  .team-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius:20px 60px 0 20px;
+    padding: 1px;
+    background: linear-gradient(45deg, #6F76E2, #243AFF, #6F76E2);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+ 
+  .team-card.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+ 
+  .team-card:not(.active) {
+    opacity: 0.6;
+    filter: blur(2px);
+  }
+  
+.team-card h3 {
+  color: aliceblue;
+  align-items: end;
+  margin-top: 21rem;
+  
+}
+.team-card p {
+  color: #ABABAB;  /* لون الرول الوظيفي*/
+  font-size: 18px; 
+   padding: 20px;
+}
+
+  .team-card > img {
+    border-radius:0 0 0 0;
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    filter: none;
+    margin: 0 -35%  ;
+    
+  }
+  
+
+  .skills  img {
+    width: clamp(20px, 2vw, 20px);
+    margin: 6px; 
+    padding: 12px 20px;
+   
+  }
+    
+     /* حجم الأيقونات */
+  .skills img {
+    position: relative;    
+    filter: brightness(0) invert(1);
+        width: 20px;     
+        height: 33px;     
+        object-fit: contain;
+         padding: 10px;
+         
+         
+}
+      
+  
+  /* أسهم السلايدر */
+  .nav {
+    
+    font-size: 28px;
+    background:rgba(255, 255, 255, 0.05);
+    border: 0 solid transparent;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+  
+
+    /* شكلها */
+    border-radius: 0;
+  
+    position: relative;
+  }
+  
+
+  /* الإطار  للأسهم */
+  .nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0;
+    padding: 1px;
+    background: linear-gradient(45deg, #6F76E2, #243AFF, #6F76E2);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+
+  .nav:hover {
+    background: rgba(167, 90, 90, 0.1);
+  }
+
+
+  @media screen and (max-width : 1340px) {
+    .team-card  h3{
+      
+      margin-top: 15rem;
+ 
+    }
+   
+
+  }
+  @media screen and (max-width : 1134px) {
+    .team-card  h3{
+      margin-top: 7rem;
+    
+    }
+    .team-card h3  , .team-card p {
+      font-size:small;
+    }
+  }
