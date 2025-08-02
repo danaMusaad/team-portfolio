@@ -49,7 +49,7 @@ const teamInfo = [
     ],
   },
   {
-    name: "خالد عبدالله الجهني",
+    name: "خلاد عبدالله الجهني",
     role: "مطور واجهات أمامية",
     image: "images/avatarboy.png",
     skills: [
@@ -113,6 +113,17 @@ const teamInfo = [
       "images/figma-icon.png",
     ],
   },
+  {
+       name: "غزل جيار ",
+        role: " مصممة واجهة وتجربة المستخدم ومطورة برمجيات",
+       image: "images/avatargirl.png",
+       skills: [
+           "images/css-icon.SVG",
+           "images/html-icon.SVG",
+           "images/js-icon.png",
+           "images/figma-icon.png"
+       ]
+   }
 ];
 
 //let index = 0;

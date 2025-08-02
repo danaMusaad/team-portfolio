@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
-
 :root {
     --bg-black: #0000;
     --primary-bg: #0f0f23;
@@ -19,27 +18,23 @@
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-
 * {
     margin: 0;
     padding: 0;
-    /*box-sizing: border-box;*/ /*cause shrinking icon*/
     font-family: "Cairo", sans-serif;
     font-weight: 400;
     font-optical-sizing: auto;
 }
 
-
 .hero {
-    min-height: 100vh;
+    min-height: 60rem;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
     background-color: black;
-    margin: -9rem 0 ; /** move hero to top pages ! */
+    margin: -9rem 0;
 }
-
 
 .hero-container {
     max-width: 1200px;
@@ -47,15 +42,14 @@
     padding: 0 2rem;
     position: relative;
     z-index: 2;
+    margin-bottom: 10rem;
 }
-
 
 .hero-content {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
 }
-
 
 .hero-badge {
     position: absolute;
@@ -72,18 +66,15 @@
     transform: rotateZ(-20deg);
 }
 
-
 .hero-badge > span > p {
     font-weight: 600;
 }
-
 
 .hero-title {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     color: var(--text-white);
 }
-
 
 .hero-description {
     font-size: 1.2rem;
@@ -93,10 +84,47 @@
     font-style: normal;
 }
 
-
 img {
     position: absolute;
     width: 400px;
     height: 400px;
     margin-top: 26rem;
+}
+
+/* Responsive Font Sizes */
+@media screen and (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .hero-description {
+        font-size: 1.05rem;
+    }
+    .hero-badge {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-description {
+        font-size: 0.95rem;
+    }
+    .hero-badge {
+        font-size: 0.7rem;
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    .hero-description {
+        font-size: 0.85rem;
+    }
+    .hero-badge {
+        font-size: 0.65rem;
+    }
 }
