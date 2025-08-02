@@ -3,30 +3,34 @@
     background: black;
     text-align: center;
     color: #fff;
-background: #0a0d1a;
-background: linear-gradient(90deg, rgba(10, 13, 26, 1) 5%, rgba(9, 9, 121, 1) 100%, rgba(0, 204, 255, 1) 57%);
+    background: #0a0d1a;
+    background: linear-gradient(90deg, rgba(10, 13, 26, 1) 5%, rgba(9, 9, 121, 1) 100%, rgba(0, 204, 255, 1) 57%);
 }
 
-.why-us h2 {
-    position: relative;
-    font-size:3vw;
-     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);    
-     background-size: 100%;
+
+#header{
+ position: relative;
+ font-size:3vw; 
+ top: 40px;
 }
-.why-us p {
+#context {
     font-size: 1.5vw;
-    z-index: 10;
-    filter: blur(-20px);
-    fill: #f9f9fa;
+    margin-top: 40px;
 }
 
 
-@media  screen and (min-width:300px ) {
+@media  screen and (max-width:850px ) {
  
-    .why-us  h2  {
-        font-size: 50px;
+    #header {
+        font-size: x-large;
+        position: relative;
+        top: 90px;
     }
-    .why-us p {
-        font-size: 20px;
+    #context {
+        font-size: medium;
+        margin-top: 6rem;
+    }
+    #header , #context {    
+    padding: 6px;
     }
 }
