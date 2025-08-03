@@ -30,9 +30,6 @@ window.addEventListener("resize", () => {
   }
 });
 
-//* run cards team
-
-
 //* team data
 const teamInfo = [
   {
@@ -40,8 +37,8 @@ const teamInfo = [
     role: "مطورة واجهات أمامية",
     image: "images/avatargirl.png",
     skills: [
-      "images/css-icon.SVG",
-      "images/html-icon.SVG",
+      "images/css-icon.svg",
+      "images/html-icon.svg",
       "images/js-icon.png",
       "images/react-icon.png",
       "images/github-icon.png",
@@ -53,8 +50,8 @@ const teamInfo = [
     role: "مطور واجهات أمامية",
     image: "images/avatarboy.png",
     skills: [
-      "images/css-icon.SVG",
-      "images/html-icon.SVG",
+      "images/css-icon.svg",
+      "images/html-icon.svg",
       "images/github-icon.png",
       "images/git-icon.png",
       "images/js-icon.png",
@@ -65,8 +62,8 @@ const teamInfo = [
     role: "مصممة واجهة وتجربة المستخدم",
     image: "images/avatargirl.png",
     skills: [
-      "images/css-icon.SVG",
-      "images/html-icon.SVG",
+      "images/css-icon.svg",
+      "images/html-icon.svg",
       "images/js-icon.png",
       "images/figma-icon.png",
     ],
@@ -76,10 +73,10 @@ const teamInfo = [
     role: "Full Stack Developer & AI",
     image: "images/avatargirl.png",
     skills: [
-      "images/css-icon.SVG",
-      "images/html-icon.SVG",
+      "images/css-icon.svg",
+      "images/html-icon.svg",
       "images/js-icon.png",
-      "images/php-icon.SVG",
+      "images/php-icon.svg",
       "images/python-icon.png",
       "images/sql-icon.png",
     ],
@@ -89,8 +86,8 @@ const teamInfo = [
     role: "Full Stack Developer",
     image: "images/avatarboy.png",
     skills: [
-      "images/css-icon.SVG",
-      "images/html-icon.SVG",
+      "images/css-icon.svg",
+      "images/html-icon.svg",
       "images/js-icon.png",
       "images/restapi-icon.png",
       "images/sql-server-icon.png",
@@ -98,7 +95,7 @@ const teamInfo = [
       "images/sass-icon.png",
       "images/NET1-icon.png",
       "images/net-framework-icon.png",
-      "images/c-sharp-icon.SVG",
+      "images/c-sharp-icon.svg",
     ],
   },
   {
@@ -106,64 +103,58 @@ const teamInfo = [
     role: "مصممة واجهة وتجربة المستخدم ومطورة تطبيقات ويب",
     image: "images/avatargirl.png",
     skills: [
-      "images/css-icon.SVG",
-      "images/html-icon.SVG",
+      "images/css-icon.svg",
+      "images/html-icon.svg",
       "images/js-icon.png",
       "images/Flutter-icon.png",
       "images/figma-icon.png",
     ],
   },
   {
-       name: "غزل جيار ",
-        role: " مصممة واجهة وتجربة المستخدم ومطورة برمجيات",
-       image: "images/avatargirl.png",
-       skills: [
-           "images/css-icon.SVG",
-           "images/html-icon.SVG",
-           "images/js-icon.png",
-           "images/figma-icon.png"
-       ]
-   }
+    name: "غزل جيار ",
+    role: "مصممة واجهة وتجربة المستخدم ومطورة برمجيات",
+    image: "images/avatargirl.png",
+    skills: [
+      "images/css-icon.svg",
+      "images/html-icon.svg",
+      "images/js-icon.png",
+      "images/figma-icon.png"
+    ]
+  }
 ];
 
-//let index = 0;
-
 class Team {
-  /** */
-  currentIndex = 0 ;
-  
+  currentIndex = 0;
+
   constructor() {
-   
-    this.Initializer(); //* intialize methods when object is created ! 
+    this.Initializer();
   }
 
   renderCards() {
     const container = document.getElementById("cards-container");
-
     container.innerHTML = "";
 
     const total = teamInfo.length;
     const indices = [
-      (this.currentIndex - 1 + total) % total, // البطاقة السابقة
-      this.currentIndex, // البطاقة الحالية
-      (this.currentIndex + 1) % total, // البطاقة التالية
+      (this.currentIndex - 1 + total) % total,
+      this.currentIndex,
+      (this.currentIndex + 1) % total,
     ];
 
     indices.forEach((i) => {
       const member = teamInfo[i];
-      const icon = document.createElement("img");
       const card = document.createElement("div");
       card.classList.add("team-card");
       if (i === this.currentIndex) card.classList.add("active");
 
       card.innerHTML = `
-            <img src="${member.image}" alt="${member.name}">
-            <h3 >${member.name}</h3>
-            <p >${member.role}</p>
-            <div class="skills">
-            ${member.skills.map((skill) => `<img src="${skill}">`).join("")}
-            </div>
-        `;
+        <img src="${member.image}" alt="${member.name}">
+        <h3>${member.name}</h3>
+        <p>${member.role}</p>
+        <div class="skills">
+          ${member.skills.map((skill) => `<img src="${skill}">`).join("")}
+        </div>
+      `;
       container.appendChild(card);
     });
   }
@@ -172,7 +163,6 @@ class Team {
     document.querySelector(".next").onclick = () => {
       this.currentIndex = (this.currentIndex + 1) % teamInfo.length;
       this.renderCards();
-      
     };
   };
 
@@ -183,15 +173,11 @@ class Team {
     };
   };
 
-  Initializer = ()=>{
-     this.SlidePrev();
-     this.slideNext();
-     this.renderCards();
+  Initializer = () => {
+    this.SlidePrev();
+    this.slideNext();
+    this.renderCards();
   }
 }
-
-
-
-
 
 const teams = new Team();
