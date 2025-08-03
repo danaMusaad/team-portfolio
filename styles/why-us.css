@@ -11,11 +11,11 @@
 #header{
  position: relative;
  font-size:3vw; 
- top: 40px;
+ top: 140px;
 }
 #context {
     font-size: 1.5vw;
-    margin-top: 40px;
+    margin-top: 180px;
 }
 
 
@@ -25,9 +25,10 @@
         font-size: x-large;
         position: relative;
         top: 90px;
+        font-weight: bold;
     }
     #context {
-        font-size: medium;
+        font-size: 15px;
         margin-top: 6rem;
     }
     #header , #context {    
